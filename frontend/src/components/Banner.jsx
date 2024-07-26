@@ -1,4 +1,5 @@
 import React from "react";
+//import { } from "../assets/banner.jpg"
 
 const Banner = () => {
   return (
@@ -6,7 +7,7 @@ const Banner = () => {
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row">
         {/* left */}
 
-        <div className="w-full md:w-1/2 mt-12 md: mt-32">
+        <div className=" order-2 md:order-1 w-full md:w-1/2 mt-12 md: mt-32">
           <div className="space-y-12">
             <h1 className="text-4xl font-bold">
               Hello! , Welcome to{" "}
@@ -33,11 +34,17 @@ const Banner = () => {
             </svg>
             <input type="text" className="grow" placeholder="Email" />
           </label>
+          <button className="btn btn-outline btn-secondary">Subscribe</button>
+
           </div>
         </div>
 
         {/* Right */}
-        <div className="w-full md:w-1/2">Right</div>
+        <div className=" order-1 md:order-2 w-full md:w-1/2">
+        
+        <img src="/public/banner.png" className="w-90 h-90" alt=""  />
+        
+        </div>
       </div>
     </>
   );
