@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [sticky, setSticky] = useState[false];
+
+  useEffect(() => {
+    const handScroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handScroll);
+    return() => {
+      window.removeEventListener("scroll", handScroll);
+    };
+  }, );
+
   const navItems = (
     <>
       <li>
@@ -18,7 +35,12 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 ">
+    <div  className={`max-w-screen-2xl container mx-auto md:px-20 px-4 dark:bg-slate-900 data:text-white fixed top-0 left-0 right-0 z-50 ${
+      sticky
+        ? "sticky-navbar shadow-md bg-base-300 dark:bg-slate-600 dark:text-white duration-300 transition-all ease-in-out"
+        : ""
+    }`}
+    >
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -59,10 +81,10 @@ const Navbar = () => {
               className="input input-bordered w-full max-w-xs" // end of text portion (type here)
             />
           </div>
-         {/* dark theme */}
-          <div>                                  
-            <label className="grid cursor-pointer place-items-center">     
-              <input                                             // get from daisyui website it's a theme code 
+          {/* dark theme */}
+          <div>
+            <label className="grid cursor-pointer place-items-center">
+              <input // get from daisyui website it's a theme code
                 type="checkbox"
                 value="synthwave"
                 className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1"
