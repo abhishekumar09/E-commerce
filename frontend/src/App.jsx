@@ -10,8 +10,8 @@ const App = () => {
     <div>
       <Navbar></Navbar>
       <Banner></Banner>
-      <Footer></Footer>
       <Course></Course>
+      <Footer></Footer>
     </div>
   );
 };
