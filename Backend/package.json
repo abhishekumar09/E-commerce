@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekumar09/E-commerce.git#main"
+  },
+  "author": "\"Abhishek kumar\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekumar09/E-commerce/issues"
+  },
+  "homepage": "https://github.com/abhishekumar09/E-commerce/tree/main#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.2",
+    "nodemon": "^3.1.4"
+  }
+}
