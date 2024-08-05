@@ -104,6 +104,8 @@ import Card from "./Card";
 
 const Course = () => {
   const [book, setBook] = useState([]);
+
+  
   useEffect(() => {
     const getBook = async () => {
       try {
@@ -116,7 +118,8 @@ const Course = () => {
       }
     };
     getBook();
-  }, []);
+
+    }, []);
 
  
  
